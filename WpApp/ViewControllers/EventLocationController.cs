@@ -11,7 +11,7 @@ namespace WpApp.ViewControllers
     public partial class EventLocationController : UIViewController, IUITableViewDataSource
     {
         private List<GoogleAutoCompleteResult> _results;
-        private readonly GooglePlaceSearchApi _googlePlaceService = new GooglePlaceSearchApi();
+        private readonly GooglePlaceSearchService _googlePlaceService = new GooglePlaceSearchService();
         public Team SelectedTeam;
         public Game SelectedGame;
 
@@ -64,7 +64,7 @@ namespace WpApp.ViewControllers
         {
             base.PrepareForSegue(segue, sender);
 
-            var detailViewController = segue.DestinationViewController as EventDetailsController;
+            var detailViewController = segue.DestinationViewController as EventCreateController;
 
             if (detailViewController != null)
             {

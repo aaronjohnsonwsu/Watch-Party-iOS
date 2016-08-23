@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Foundation;
 using UIKit;
 using WpApp.Core.Models;
+using WpApp.Helpers;
 using WpApp.TableCells;
 
 namespace WpApp.ViewControllers
@@ -39,7 +40,7 @@ namespace WpApp.ViewControllers
             var currentOpponent = SelectedTeam.Games[indexPath.Row];
 
             cell.OpponentName.Text = currentOpponent.Opponent + " " + currentOpponent.GameDate;
-            cell.OpponentLogo.Image = FromUrl(currentOpponent.OpponentLogo);
+            cell.OpponentLogo.Image = Common.FromUrl(currentOpponent.OpponentLogo);
 
             return cell;
         }
@@ -57,15 +58,5 @@ namespace WpApp.ViewControllers
             }
         }
 
-        static UIImage FromUrl(string uri)
-        {
-            using (var url = new NSUrl(uri))
-            {
-                using (var data = NSData.FromUrl(url))
-                {
-                    return UIImage.LoadFromData(data);
-                }
-            }
-        }
     }
 }

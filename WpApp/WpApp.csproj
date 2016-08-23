@@ -88,14 +88,28 @@
     <Compile Include="Core\Models\EventComment.cs" />
     <Compile Include="Core\Models\Game.cs" />
     <Compile Include="Core\Models\GoogleAutoCompleteResult.cs" />
+    <Compile Include="Core\Models\GoogleDistanceResult.cs" />
     <Compile Include="Core\Models\GoogleLocation.cs" />
     <Compile Include="Core\Models\Team.cs" />
     <Compile Include="Core\Models\User.cs" />
     <Compile Include="Core\Models\UserLocation.cs" />
     <Compile Include="Core\Models\UserTeam.cs" />
-    <Compile Include="Core\Services\CollegeTeamApi.cs" />
-    <Compile Include="Core\Services\GooglePlaceSearchApi.cs" />
-    <Compile Include="Core\Services\WatchPartyApi.cs" />
+    <Compile Include="Core\Services\GoogleDistanceService.cs" />
+    <Compile Include="Core\Services\GooglePlaceSearchService.cs" />
+    <Compile Include="Core\Services\WatchPartyService.cs" />
+    <Compile Include="Helpers\Common.cs" />
+    <Compile Include="ViewControllers\EventDetailsController.cs" />
+    <Compile Include="ViewControllers\EventDetailsController.designer.cs">
+      <DependentUpon>EventDetailsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\EventCreateController.cs" />
+    <Compile Include="ViewControllers\EventCreateController.designer.cs">
+      <DependentUpon>EventCreateController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableCells\NearbyEventTableViewCell.cs" />
+    <Compile Include="TableCells\NearbyEventTableViewCell.designer.cs">
+      <DependentUpon>NearbyEventTableViewCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="TableCells\EventTableViewCell.cs" />
     <Compile Include="TableCells\EventTableViewCell.designer.cs">
       <DependentUpon>EventTableViewCell.cs</DependentUpon>
@@ -103,14 +117,6 @@
     <Compile Include="ViewControllers\NearbyEventsController.cs" />
     <Compile Include="ViewControllers\NearbyEventsController.designer.cs">
       <DependentUpon>NearbyEventsController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SearchEventsTeamController.cs" />
-    <Compile Include="SearchEventsTeamController.designer.cs">
-      <DependentUpon>SearchEventsTeamController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewControllers\EventDetailsController.cs" />
-    <Compile Include="ViewControllers\EventDetailsController.designer.cs">
-      <DependentUpon>EventDetailsController.cs</DependentUpon>
     </Compile>
     <Compile Include="TableCells\OpponentTableViewCell.cs" />
     <Compile Include="TableCells\OpponentTableViewCell.designer.cs">
@@ -138,7 +144,6 @@
     </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <BundleResource Include="Data\teams.json" />
     <None Include="app.config" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
@@ -148,7 +153,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
@@ -190,7 +197,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="brand.gif" />
     <Content Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup />

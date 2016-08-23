@@ -6,6 +6,7 @@ using System.Net;
 using UIKit;
 using WpApp.Core.Models;
 using WpApp.Core.Services;
+using WpApp.Helpers;
 using WpApp.TableCells;
 using WpApp.ViewControllers;
 
@@ -15,7 +16,7 @@ namespace WpApp
     {
         private List<Team> _results;
         private List<Team> _allTeams;
-        private readonly WatchPartyApi _watchPartyService = new WatchPartyApi();
+        private readonly WatchPartyService _watchPartyService = new WatchPartyService();
 
         public string Search;
 
@@ -66,7 +67,7 @@ namespace WpApp
             var currentTeam = _results[indexPath.Row];
 
             cell.TeamName.Text = currentTeam.Name;
-            cell.Logo.Image = FromUrl(currentTeam.Icon);
+            cell.Logo.Image = Common.FromUrl(currentTeam.Icon);
 
             return cell;
         }
@@ -83,15 +84,5 @@ namespace WpApp
             }
         }
 
-        static UIImage FromUrl(string uri)
-        {
-            using (var url = new NSUrl(uri))
-            {
-                using (var data = NSData.FromUrl(url))
-                {
-                    return UIImage.LoadFromData(data);
-                }
-            }
-        }
     }
 }

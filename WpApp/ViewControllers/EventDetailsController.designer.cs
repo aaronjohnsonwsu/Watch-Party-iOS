@@ -16,82 +16,10 @@ namespace WpApp
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton CreateEventButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        MapKit.MKMapView EventLocationMapView { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel GameDateLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel HomeAwayLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel LocationAddressLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel LocationNameLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel LocationPhoneNumberLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView OpponentTeamLogoImageView { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView TeamLogoImageView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (CreateEventButton != null) {
-                CreateEventButton.Dispose ();
-                CreateEventButton = null;
-            }
-
-            if (EventLocationMapView != null) {
-                EventLocationMapView.Dispose ();
-                EventLocationMapView = null;
-            }
-
-            if (GameDateLabel != null) {
-                GameDateLabel.Dispose ();
-                GameDateLabel = null;
-            }
-
-            if (HomeAwayLabel != null) {
-                HomeAwayLabel.Dispose ();
-                HomeAwayLabel = null;
-            }
-
-            if (LocationAddressLabel != null) {
-                LocationAddressLabel.Dispose ();
-                LocationAddressLabel = null;
-            }
-
-            if (LocationNameLabel != null) {
-                LocationNameLabel.Dispose ();
-                LocationNameLabel = null;
-            }
-
-            if (LocationPhoneNumberLabel != null) {
-                LocationPhoneNumberLabel.Dispose ();
-                LocationPhoneNumberLabel = null;
-            }
-
-            if (OpponentTeamLogoImageView != null) {
-                OpponentTeamLogoImageView.Dispose ();
-                OpponentTeamLogoImageView = null;
-            }
-
             if (TeamLogoImageView != null) {
                 TeamLogoImageView.Dispose ();
                 TeamLogoImageView = null;

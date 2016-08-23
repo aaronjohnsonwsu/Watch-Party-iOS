@@ -16,10 +16,6 @@ namespace WpApp
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView ScheduleTableView { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISearchBar TeamNameSearchBar { get; set; }
 
         [Outlet]
@@ -28,11 +24,6 @@ namespace WpApp
 
         void ReleaseDesignerOutlets ()
         {
-            if (ScheduleTableView != null) {
-                ScheduleTableView.Dispose ();
-                ScheduleTableView = null;
-            }
-
             if (TeamNameSearchBar != null) {
                 TeamNameSearchBar.Dispose ();
                 TeamNameSearchBar = null;

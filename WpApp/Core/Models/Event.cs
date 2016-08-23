@@ -14,7 +14,8 @@ namespace WpApp.Core.Models
         public int NumberAttending { get; set; }
         public bool IsCancelled { get; set; }
         public string CancellationReason { get; set; }
-
+        public string LocationCoordinates { get; set; }
+            
         public Team Team { get; set; }
         public Game Game { get; set; }
         public List<EventComment> Comments { get; set; }
