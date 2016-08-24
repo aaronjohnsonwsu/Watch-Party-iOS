@@ -61,7 +61,14 @@ namespace WpApp.ViewControllers
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
             base.PrepareForSegue(segue, sender);
-            
+
+            var eventDetailsViewController = segue.DestinationViewController as EventDetailsController;
+
+            if (eventDetailsViewController != null)
+            {
+                eventDetailsViewController.SelectedEvent = _events[NearbyEventsTableView.IndexPathForSelectedRow.Row];
+            }
+
         }
     }
 }
